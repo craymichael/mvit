@@ -2,3 +2,4 @@
 
 from .build import build_dataset, DATASET_REGISTRY  # noqa
 from .imagenet import Imagenet  # noqa
+from .inaturalist import INaturalist  # noqa
