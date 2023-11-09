@@ -4,6 +4,19 @@
 
 import pprint
 
+import os.path as osp
+
+proj_path = osp.dirname(osp.dirname(osp.realpath(__file__)))
+
+try:
+    import mvit
+except ImportError:
+    import sys
+
+    sys.path.append(proj_path)
+
+    import mvit
+
 import mvit.models.losses as losses
 import mvit.models.optimizer as optim
 import mvit.utils.checkpoint as cu

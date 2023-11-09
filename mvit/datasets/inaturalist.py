@@ -19,7 +19,7 @@ logger = logging.get_logger(__name__)
 
 
 @DATASET_REGISTRY.register()
-class INaturalist(data.Dataset):
+class Inaturalist(data.Dataset):
     def __init__(self, cfg, mode, val_size=0.1, seed=42, **kwargs):
         self.cfg = cfg
         self.mode = mode

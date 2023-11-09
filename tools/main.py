@@ -5,6 +5,19 @@
 import argparse
 import sys
 
+import os.path as osp
+
+proj_path = osp.dirname(osp.dirname(osp.realpath(__file__)))
+
+try:
+    import mvit
+except ImportError:
+    import sys
+
+    sys.path.append(proj_path)
+
+    import mvit
+
 import mvit.utils.checkpoint as cu
 from engine import test, train
 from mvit.config.defaults import assert_and_infer_cfg, get_cfg
